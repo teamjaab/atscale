@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AtScale × JAAB — Marketing Plan 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FDF3EA;
+    --dark: #032626;
+    --orange: #EE532B;
+    --orange-light: #fde8e0;
+    --card-bg: #ffffff;
+    --border: rgba(3,38,38,0.12);
+    --muted: rgba(3,38,38,0.5);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--dark);
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* HEADER */
+  header {
+    background: var(--dark);
+    color: var(--bg);
+    padding: 24px 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .header-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header-sep {
+    width: 1px;
+    height: 28px;
+    background: rgba(253,243,234,0.25);
+  }
+
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+
+  .header-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    color: rgba(253,243,234,0.7);
+    letter-spacing: 0.02em;
+  }
+
+  .header-badge {
+    background: var(--orange);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .header-meta {
+    font-size: 11px;
+    opacity: 0.45;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* TABS */
+  nav.tabs {
+    background: var(--dark);
+    padding: 0 40px;
+    display: flex;
+    gap: 2px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    overflow-x: auto;
+  }
+
+  nav.tabs button {
+    background: none;
+    border: none;
+    color: rgba(253,243,234,0.5);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px 22px 12px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+  }
+
+  nav.tabs button:hover { color: var(--bg); }
+  nav.tabs button.active { color: var(--bg); border-bottom-color: var(--orange); }
+
+  /* MAIN */
+  main { max-width: 1100px; margin: 0 auto; padding: 40px 40px 80px; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  /* SECTION INTRO */
+  .section-intro { margin-bottom: 32px; }
+  .section-intro h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 32px;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+    line-height: 1.15;
+  }
+  .section-intro h2 em { font-style: normal; color: var(--orange); }
+  .section-intro p { color: var(--muted); max-width: 620px; font-size: 14px; }
+
+  /* ENTITY LEGEND */
+  .entity-legend { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
+  .entity-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 11px; font-weight: 700; padding: 5px 12px;
+    border-radius: 20px; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .pill-group   { background: var(--dark); color: var(--bg); }
+  .pill-op      { background: var(--orange); color: #fff; }
+  .pill-talent  { background: #1a6b6b; color: #fff; }
+  .pill-training{ background: #8b5e15; color: #fff; }
+
+  /* AXIS CARDS */
+  .axes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
+
+  .axis-card {
+    background: var(--card-bg);
+    border-radius: 16px; padding: 24px;
+    border: 1px solid var(--border);
+    position: relative;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .axis-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(3,38,38,0.08); }
+
+  .axis-number {
+    position: absolute; top: 18px; right: 20px;
+    font-family: 'DM Serif Display', serif; font-size: 48px;
+    color: var(--dark); opacity: 0.05; line-height: 1;
+  }
+
+  .axis-priority {
+    display: inline-block; font-size: 10px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.08em;
+    padding: 3px 9px; border-radius: 12px; margin-bottom: 12px;
+  }
+  .priority-p0      { background: #032626; color: #FDF3EA; }
+  .priority-p1      { background: var(--orange); color: #fff; }
+  .priority-p2      { background: var(--orange-light); color: var(--orange); }
+  .priority-ongoing { background: #e8f5e9; color: #1b5e20; }
+
+  .axis-card h3 {
+    font-family: 'DM Serif Display', serif; font-size: 19px;
+    margin-bottom: 8px; line-height: 1.2;
+  }
+  .axis-card p { font-size: 13px; color: var(--muted); margin-bottom: 14px; line-height: 1.55; }
+
+  .axis-deliverables { list-style: none; margin-bottom: 14px; }
+  .axis-deliverables li {
+    font-size: 12.5px; padding: 5px 0 5px 16px;
+    position: relative; color: var(--dark);
+    border-bottom: 1px solid var(--border);
+  }
+  .axis-deliverables li:last-child { border-bottom: none; }
+  .axis-deliverables li::before {
+    content: '→'; position: absolute; left: 0;
+    color: var(--orange); font-size: 11px;
+  }
+
+  .wesype-tag {
+    display: inline-block; font-size: 9px; font-weight: 800;
+    background: #f0f7f4; color: #0a6640; border: 1px solid #b8ddc8;
+    padding: 1px 7px; border-radius: 8px; vertical-align: middle; margin-left: 4px;
+    text-transform: uppercase; letter-spacing: 0.05em;
+  }
+
+  .axis-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 8px; flex-wrap: wrap; margin-top: 14px;
+  }
+  .axis-entities { display: flex; gap: 5px; flex-wrap: wrap; }
+  .entity-tag {
+    font-size: 10px; font-weight: 700; padding: 3px 8px;
+    border-radius: 10px; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .tag-group   { background: rgba(3,38,38,0.1); color: var(--dark); }
+  .tag-op      { background: rgba(238,83,43,0.15); color: var(--orange); }
+  .tag-talent  { background: rgba(26,107,107,0.12); color: #1a6b6b; }
+  .tag-training{ background: rgba(139,94,21,0.12); color: #8b5e15; }
+  .axis-timeline { font-size: 11px; color: var(--muted); font-weight: 600; }
+
+  /* BUDGET */
+  .budget-total-strip {
+    background: var(--dark); color: var(--bg);
+    border-radius: 16px; padding: 22px 28px;
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 20px; flex-wrap: wrap; gap: 16px;
+  }
+  .budget-total-strip .big { font-family: 'DM Serif Display', serif; font-size: 40px; color: var(--orange); }
+  .budget-total-strip .label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; opacity: 0.6; margin-top: 2px; }
+  .budget-total-strip .note { font-size: 12px; opacity: 0.5; max-width: 340px; line-height: 1.5; }
+
+  .budget-entity-row {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+    margin-bottom: 28px;
+  }
+
+  .entity-budget-card {
+    border-radius: 14px; padding: 18px 20px;
+    border: 1px solid var(--border); text-align: center;
+    background: var(--card-bg);
+  }
+  .entity-budget-card .ent-amount {
+    font-family: 'DM Serif Display', serif; font-size: 30px; line-height: 1; margin-bottom: 4px;
+  }
+  .entity-budget-card .ent-name { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  .entity-budget-card .ent-pct { font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .entity-budget-card.ec-group   { border-top: 3px solid var(--dark); }
+  .entity-budget-card.ec-op      { border-top: 3px solid var(--orange); }
+  .entity-budget-card.ec-talent  { border-top: 3px solid #1a6b6b; }
+  .entity-budget-card.ec-training{ border-top: 3px solid #8b5e15; }
+
+  /* Stacked bar */
+  .stacked-bar-wrap { margin-bottom: 28px; }
+  .stacked-bar {
+    height: 32px; border-radius: 10px; overflow: hidden;
+    display: flex; width: 100%;
+  }
+  .sb-seg {
+    height: 100%; display: flex; align-items: center;
+    justify-content: center; font-size: 11px; font-weight: 800;
+    color: #fff; transition: width 0.8s ease;
+    white-space: nowrap; overflow: hidden;
+  }
+  .sb-group   { background: var(--dark); }
+  .sb-op      { background: var(--orange); }
+  .sb-talent  { background: #1a6b6b; }
+  .sb-training{ background: #8b5e15; }
+
+  .stacked-legend {
+    display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px;
+  }
+  .sl-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+  .sl-dot { width: 10px; height: 10px; border-radius: 3px; }
+
+  /* Budget table */
+  .budget-table-wrap {
+    background: var(--card-bg); border-radius: 16px;
+    border: 1px solid var(--border); overflow: hidden; margin-bottom: 24px;
+  }
+  .budget-table { width: 100%; border-collapse: collapse; }
+  .budget-table th {
+    background: var(--dark); color: var(--bg);
+    font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.06em; padding: 12px 16px; text-align: left;
+  }
+  .budget-table th:not(:first-child) { text-align: right; }
+  .budget-table td {
+    padding: 12px 16px; font-size: 13px;
+    border-bottom: 1px solid var(--border); vertical-align: middle;
+  }
+  .budget-table td:not(:first-child) { text-align: right; font-variant-numeric: tabular-nums; }
+  .budget-table tr:last-child td { border-bottom: none; }
+  .budget-table .row-total td { background: rgba(3,38,38,0.04); font-weight: 800; font-size: 13.5px; }
+  .budget-table .row-partner td:first-child { border-left: 3px solid #6b8b9e; padding-left: 13px; }
+  .poste-name { font-weight: 600; }
+  .poste-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .cell-muted { color: var(--muted); font-size: 12px; }
+  .partner-badge {
+    font-size: 10px; font-weight: 700; background: #e8f4f0; color: #0a5540;
+    padding: 2px 7px; border-radius: 8px; white-space: nowrap; margin-left: 6px;
+  }
+  .ext-badge {
+    font-size: 10px; font-weight: 700; background: #f0f4ff; color: #2a4090;
+    padding: 2px 7px; border-radius: 8px; white-space: nowrap; margin-left: 6px;
+  }
+
+  .note-box {
+    background: #fff8f0; border: 1px solid #fbd5c0;
+    border-radius: 12px; padding: 16px 20px;
+    font-size: 13px; color: var(--dark);
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .note-box .icon { font-size: 17px; flex-shrink: 0; margin-top: 1px; }
+
+  /* PACKAGE */
+  .package-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 700px) { .package-grid { grid-template-columns: 1fr; } }
+
+  .package-col h3 {
+    font-family: 'DM Serif Display', serif; font-size: 22px;
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+  }
+  .badge-col {
+    font-family: 'Manrope', sans-serif; font-size: 10px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.07em; padding: 3px 10px; border-radius: 12px;
+  }
+  .badge-inclus { background: #032626; color: var(--bg); }
+  .badge-bonus  { background: var(--orange); color: #fff; }
+
+  .package-list { display: flex; flex-direction: column; gap: 10px; }
+
+  .package-item {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; padding: 14px 16px;
+    transition: box-shadow 0.15s;
+  }
+  .package-item:hover { box-shadow: 0 4px 16px rgba(3,38,38,0.06); }
+  .package-item-title { font-weight: 700; font-size: 13.5px; margin-bottom: 4px; line-height: 1.3; }
+  .package-item-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .package-item.bonus-item { border-color: rgba(238,83,43,0.2); background: #fffaf7; }
+  .pkg-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 8px; }
+  .wk-badge {
+    font-size: 10px; font-weight: 700; color: var(--muted);
+    background: rgba(3,38,38,0.06); padding: 2px 8px; border-radius: 8px;
+  }
+  .wesype-badge {
+    font-size: 10px; font-weight: 700; background: #f0f7f4;
+    color: #0a6640; border: 1px solid #b8ddc8; padding: 2px 8px; border-radius: 8px;
+  }
+
+  /* GANTT */
+  .gantt-legend { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 24px; }
+  .gantt-legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; }
+  .gantt-dot { width: 10px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+  .gd-group   { background: var(--dark); }
+  .gd-op      { background: var(--orange); }
+  .gd-talent  { background: #1a6b6b; }
+  .gd-training{ background: #8b5e15; }
+  .gd-partner { background: #6b8b9e; }
+
+  .gantt-wrap { background: var(--card-bg); border-radius: 16px; border: 1px solid var(--border); overflow: auto; }
+  .gantt-inner { min-width: 860px; }
+
+  .gantt-header {
+    display: grid; grid-template-columns: 220px repeat(13, 1fr);
+    background: var(--dark); position: sticky; top: 0; z-index: 2;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+  }
+  .gantt-header-cell {
+    padding: 10px 4px; font-size: 10px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    text-align: center; color: rgba(253,243,234,0.6);
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .gantt-header-cell:first-child { text-align: left; padding-left: 16px; color: var(--bg); }
+
+  .gantt-row {
+    display: grid; grid-template-columns: 220px repeat(13, 1fr);
+    border-bottom: 1px solid var(--border); min-height: 38px; align-items: center;
+  }
+  .gantt-row:last-child { border-bottom: none; }
+  .gantt-row:hover { background: rgba(3,38,38,0.02); }
+
+  .gantt-row.section-header { background: rgba(3,38,38,0.04); min-height: 28px; }
+  .gantt-row.section-header .gantt-label {
+    font-size: 9.5px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.08em; color: var(--muted);
+  }
+
+  .gantt-label {
+    padding: 7px 8px 7px 16px; font-size: 11.5px; font-weight: 600;
+    line-height: 1.3; display: flex; flex-direction: column; gap: 1px;
+    border-right: 1px solid var(--border);
+  }
+  .gantt-label small { font-size: 10px; color: var(--muted); font-weight: 500; }
+
+  .gantt-cell {
+    border-right: 1px solid rgba(3,38,38,0.05);
+    height: 100%; min-height: 38px; position: relative;
+  }
+  .gantt-cell:last-child { border-right: none; }
+
+  .gantt-bar {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    height: 16px; border-radius: 4px; left: 2px; right: 2px; opacity: 0.88;
+  }
+  .gantt-bar.phase-prep {
+    height: 12px; opacity: 0.45; border: 2px dashed; background: transparent;
+  }
+
+  .gb-group    { background: var(--dark); }
+  .gb-op       { background: var(--orange); }
+  .gb-talent   { background: #1a6b6b; }
+  .gb-training { background: #8b5e15; }
+  .gb-partner  { background: #6b8b9e; }
+  .gb-group-dash    { border-color: var(--dark); }
+  .gb-op-dash       { border-color: var(--orange); }
+  .gb-talent-dash   { border-color: #1a6b6b; }
+  .gb-training-dash { border-color: #8b5e15; }
+
+  .milestone {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20px; height: 20px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 9px; color: white; font-weight: 800;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 680px) {
+    header, nav.tabs, main { padding-left: 20px; padding-right: 20px; }
+    .axes-grid { grid-template-columns: 1fr; }
+    .budget-entity-row { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-logos">
+    <!-- AtScale logo -->
+    <img src="atscale.svg" alt="AtScale" style="height:22px;filter:brightness(0) invert(1);">
+    <div class="header-sep"></div>
+    <!-- JAAB logo inline -->
+    <svg width="72" height="32" viewBox="0 0 94 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 41.866C1.93617 40.4957 3.24681 38.8425 3.93192 36.9064C4.64681 34.9702 5.00426 32.6319 5.00426 29.8915V18.4979C5.00426 17.8128 4.94468 17.0532 4.82553 16.2192C4.70638 15.3851 4.57234 14.6851 4.4234 14.1191C4.30426 13.5532 4.17021 13.017 4.02128 12.5106C3.90213 11.9745 3.84255 11.6766 3.84255 11.617V11.4383H11.4383V29.8915C11.4383 31.9468 11.1106 33.7638 10.4553 35.3426C9.82979 36.9511 8.95106 38.2021 7.81915 39.0957C6.71702 40.0191 5.51064 40.7191 4.2 41.1957C2.91915 41.6723 1.54894 41.9404 0.0893617 42L0 41.866ZM3.70851 4.02128C3.70851 2.91915 4.11064 1.98085 4.91489 1.20638C5.71915 0.402128 6.68723 0 7.81915 0C8.95106 0 9.91915 0.402128 10.7234 1.20638C11.5277 1.98085 11.9298 2.91915 11.9298 4.02128C11.9298 5.15319 11.5277 6.12128 10.7234 6.92553C9.91915 7.7 8.95106 8.08723 7.81915 8.08723C6.71702 8.08723 5.74894 7.7 4.91489 6.92553C4.11064 6.12128 3.70851 5.15319 3.70851 4.02128Z" fill="#FDF3EA"/>
+      <path d="M13.9799 27.3C13.9799 24.9766 14.9033 23.2043 16.7501 21.983C18.5969 20.7319 20.6522 20.1064 22.916 20.1064C23.3033 20.1064 23.7054 20.1213 24.1224 20.1511C25.4926 20.2106 26.699 20.434 27.7416 20.8213V18.1851C27.7416 14.8191 26.9671 13.1362 25.4182 13.1362C24.2863 13.1362 22.5288 13.9553 20.1458 15.5936C17.7629 17.2319 16.348 18.3638 15.9011 18.9894H15.6777V12.8234C19.5501 11.7213 22.9309 11.1702 25.8203 11.1702C28.6501 11.1702 30.765 11.8404 32.165 13.1809C33.565 14.5213 34.265 16.3234 34.265 18.5872V27.8362C34.265 29.8617 34.8011 30.8745 35.8735 30.8745C36.2309 30.8745 36.6331 30.7702 37.0799 30.5617L37.1692 30.6957C37.0203 31.7383 36.5437 32.6021 35.7394 33.2872C34.9352 33.9426 33.9075 34.2702 32.6565 34.2702C30.1841 34.2702 28.6203 33.1085 27.965 30.7851C26.4458 33.1681 24.182 34.3596 21.1735 34.3596C18.9394 34.3596 17.182 33.6596 15.9011 32.2596C14.6203 30.8298 13.9799 29.1766 13.9799 27.3ZM20.7714 26.4064C20.7714 27.6872 21.1288 28.7447 21.8437 29.5787C22.5884 30.383 23.5565 30.7851 24.748 30.7851C25.8799 30.7851 26.8777 30.3234 27.7416 29.4V22.1617C27.3543 22.1617 27.0416 22.1468 26.8033 22.117C26.3863 22.0574 25.9841 22.0277 25.5969 22.0277C24.2565 22.0277 23.1097 22.4 22.1565 23.1447C21.2331 23.8894 20.7714 24.9766 20.7714 26.4064Z" fill="#FDF3EA"/>
+      <path d="M37.7393 27.3C37.7393 24.9766 38.6627 23.2043 40.5095 21.983C42.3563 20.7319 44.4116 20.1064 46.6754 20.1064C47.0627 20.1064 47.4648 20.1213 47.8818 20.1511C49.252 20.2106 50.4584 20.434 51.501 20.8213V18.1851C51.501 14.8191 50.7265 13.1362 49.1776 13.1362C48.0456 13.1362 46.2882 13.9553 43.9052 15.5936C41.5222 17.2319 40.1073 18.3638 39.6605 18.9894H39.4371V12.8234C43.3095 11.7213 46.6903 11.1702 49.5797 11.1702C52.4095 11.1702 54.5244 11.8404 55.9244 13.1809C57.3244 14.5213 58.0244 16.3234 58.0244 18.5872V27.8362C58.0244 29.8617 58.5605 30.8745 59.6329 30.8745C59.9903 30.8745 60.3925 30.7702 60.8393 30.5617L60.9286 30.6957C60.7797 31.7383 60.3031 32.6021 59.4988 33.2872C58.6946 33.9426 57.6669 34.2702 56.4159 34.2702C53.9435 34.2702 52.3797 33.1085 51.7244 30.7851C50.2052 33.1681 47.9414 34.3596 44.9329 34.3596C42.6988 34.3596 40.9414 33.6596 39.6605 32.2596C38.3797 30.8298 37.7393 29.1766 37.7393 27.3ZM44.5308 26.4064C44.5308 27.6872 44.8882 28.7447 45.6031 29.5787C46.3478 30.383 47.3159 30.7851 48.5073 30.7851C49.6393 30.7851 50.6371 30.3234 51.501 29.4V22.1617C51.1137 22.1617 50.801 22.1468 50.5627 22.117C50.1456 22.0574 49.7435 22.0277 49.3563 22.0277C48.0159 22.0277 46.869 22.4 45.9159 23.1447C44.9925 23.8894 44.5308 24.9766 44.5308 26.4064Z" fill="#FDF3EA"/>
+      <path d="M61.1964 1.65319V1.47447L69.0602 0.580851V14.566C70.6091 12.3021 72.7985 11.1702 75.6283 11.1702C78.1304 11.1702 80.2155 12.1532 81.8836 14.1191C83.5517 16.0851 84.3857 18.8553 84.3857 22.4298C84.3857 26.2426 83.4325 29.1915 81.5261 31.2766C79.6496 33.3319 77.4304 34.3596 74.8687 34.3596C72.5751 34.3596 70.624 33.5404 69.0155 31.9021L62.4921 34.2255V8.4C62.4921 6.49362 62.0602 4.24468 61.1964 1.65319ZM71.9198 31.0979C73.7964 31.0979 75.1666 30.2638 76.0304 28.5957C76.8942 26.9277 77.3261 24.8723 77.3261 22.4298C77.3261 20.2553 76.9389 18.4532 76.1644 17.0234C75.39 15.5936 74.2134 14.8787 72.6347 14.8787C71.4432 14.8787 70.2517 15.4 69.0602 16.4426V30.383C69.924 30.8596 70.8772 31.0979 71.9198 31.0979Z" fill="#FDF3EA"/>
+      <circle cx="89.2186" cy="30.036" r="3.81818" fill="#EE532B"/>
+    </svg>
+  </div>
+  <div class="header-right">
+    <span class="header-title">Marketing Plan 2026</span>
+    <span class="header-meta">June 2026 · June 2027 · Confidential</span>
+  </div>
+</header>
+
+<!-- TABS -->
+<nav class="tabs">
+  <button class="active" onclick="showTab('axes',this)">🎯 Strategic Pillars</button>
+  <button onclick="showTab('budget',this)">💶 Budget by Entity</button>
+  <button onclick="showTab('package',this)">📦 Package &amp; Add-ons</button>
+  <button onclick="showTab('gantt',this)">📅 Gantt Roadmap</button>
+</nav>
+
+<main>
+
+<!-- ══════════════════════════════ TAB 1: STRATEGIC PILLARS -->
+<div id="tab-axes" class="tab-panel active">
+  <div class="section-intro">
+    <h2>Strategic Pillars <em>&amp; Priorities</em></h2>
+    <p>Five structuring pillars, ordered from most urgent to most long-term. Each pillar is attributed to the entities it directly impacts.</p>
+  </div>
+
+  <div class="entity-legend">
+    <span class="entity-pill pill-group">🏢 Group</span>
+    <span class="entity-pill pill-op">⚡ Operating Partners</span>
+    <span class="entity-pill pill-talent">🎯 Talent</span>
+    <span class="entity-pill pill-training">📚 Training</span>
+  </div>
+
+  <div class="axes-grid">
+
+    <!-- PILLAR 1 -->
+    <div class="axis-card">
+      <div class="axis-number">1</div>
+      <span class="axis-priority priority-p0">P0 — Foundation</span>
+      <h3>Web Ecosystem &amp; Digital Presence</h3>
+      <p>Build a coherent, conversion-focused digital ecosystem for each business unit while establishing a unified brand architecture at group level.</p>
+      <ul class="axis-deliverables">
+        <li>Group homepage at-scale.co: gateway to all three BUs</li>
+        <li>Operating Partners site refresh (standalone, no talent/training mention)</li>
+        <li>Talent multi-page site on talent.atscale.co (Candidate/Client tracks)</li>
+        <li>Training foundation site on training.atscale.co (methodology focus)</li>
+        <li>Unified naming convention and brand alignment across all touchpoints</li>
+      </ul>
+      <div class="axis-footer">
+        <div class="axis-entities">
+          <span class="entity-tag tag-group">Group</span>
+          <span class="entity-tag tag-op">Operating Partners</span>
+          <span class="entity-tag tag-talent">Talent</span>
+          <span class="entity-tag tag-training">Training</span>
+        </div>
+        <span class="axis-timeline">Q2 2026</span>
+      </div>
+    </div>
+
+    <!-- PILLAR 2 -->
+    <div class="axis-card">
+      <div class="axis-number">2</div>
+      <span class="axis-priority priority-p0">P0 — Credibility</span>
+      <h3>Proof Points &amp; Authority Content <span class="wesype-tag">WeSype-powered</span></h3>
+      <p>WeSype's AI agent acts as the content production engine across the full editorial chain. JAAB orchestrates strategy, editorial direction, tone of voice and performance tracking. The agent handles volume and consistency.</p>
+      <ul class="axis-deliverables">
+        <li>LinkedIn posting routines for Partners <span class="wesype-tag">Agent</span>: 1 associate · 1 theme · 1 persona · 1 topic per post cycle</li>
+        <li>White papers and long-form thought leadership pieces <span class="wesype-tag">Agent</span></li>
+        <li>Client proof points and success stories (text-first, video-adapted later)</li>
+        <li>Promotional video production: testimonials, BU showcases, format adaptations</li>
+        <li>LinkedIn performance KPIs: reach, engagement rate, follower growth, lead attribution per partner and per thematic</li>
+        <li>Monthly social analytics review and content calendar adjustment</li>
+      </ul>
+      <div class="axis-footer">
+        <div class="axis-entities">
+          <span class="entity-tag tag-op">Operating Partners</span>
+          <span class="entity-tag tag-talent">Talent</span>
+          <span class="entity-tag tag-training">Training</span>
+        </div>
+        <span class="axis-timeline">Q2 → Q3 2026</span>
+      </div>
+    </div>
+
+    <!-- PILLAR 3 -->
+    <div class="axis-card">
+      <div class="axis-number">3</div>
+      <span class="axis-priority priority-p1">P1 — Acquisition</span>
+      <h3>SEO, Outbound &amp; Lead Generation</h3>
+      <p>Build predictable, scalable acquisition channels independent of the founders' personal networks, for each business unit.</p>
+      <ul class="axis-deliverables">
+        <li>SEO via WeBurst: technical audit, continuous optimization, monthly reporting</li>
+        <li>Systematic lead magnet approach on all WeSype-produced content (white papers, posts, case studies)</li>
+        <li>Thematic landing pages with tracking and conversion optimization</li>
+        <li>LinkedIn Ads experimentation to amplify top-performing content</li>
+      </ul>
+      <div class="axis-footer">
+        <div class="axis-entities">
+          <span class="entity-tag tag-op">Operating Partners</span>
+          <span class="entity-tag tag-talent">Talent</span>
+        </div>
+        <span class="axis-timeline">Q3 → Q4 2026</span>
+      </div>
+    </div>
+
+    <!-- PILLAR 4 -->
+    <div class="axis-card">
+      <div class="axis-number">4</div>
+      <span class="axis-priority priority-p2">P2 — Authority</span>
+      <h3>Events &amp; Industry Presence</h3>
+      <p>Establish a physical and intellectual presence in PE/VC and B2B SaaS ecosystems to generate warm leads and reinforce legitimacy.</p>
+      <ul class="axis-deliverables">
+        <li>Speaker Program: pitching Partners for keynote or workshop slots (SaaStock, IPEM, London Tech Week)</li>
+        <li>Event partnership or booth as a meeting hub for clients and candidates</li>
+        <li>On-site activation: dedicated landing pages and QR-tracked content for attendees</li>
+        <li>Post-event content repurposing for digital channels</li>
+      </ul>
+      <div class="axis-footer">
+        <div class="axis-entities">
+          <span class="entity-tag tag-op">Operating Partners</span>
+        </div>
+        <span class="axis-timeline">Q4 2026 → Q1 2027</span>
+      </div>
+    </div>
+
+    <!-- PILLAR 5 -->
+    <div class="axis-card" style="border-color:rgba(3,38,38,0.2);background:rgba(3,38,38,0.02);">
+      <div class="axis-number">5</div>
+      <span class="axis-priority priority-ongoing">Ongoing — Governance</span>
+      <h3>External CMO &amp; Strategic Oversight</h3>
+      <p>Transversal marketing leadership: strategy, prioritization, partner orchestration (WeBurst, WeSype, video studios) and full performance ownership.</p>
+      <ul class="axis-deliverables">
+        <li>Quarterly review with Partners: pipeline, SEO, reach, ROI</li>
+        <li>Social media monitoring: LinkedIn analytics per partner, per theme, per format</li>
+        <li>Single point of contact managing all external partners</li>
+        <li>Brand consistency across all touchpoints and entities</li>
+        <li>Ongoing editorial direction and quality control on WeSype-generated content</li>
+      </ul>
+      <div class="axis-footer">
+        <div class="axis-entities">
+          <span class="entity-tag tag-group">Group (transversal)</span>
+        </div>
+        <span class="axis-timeline">June 2026 → June 2027</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="margin-top:28px;" class="note-box">
+    <span class="icon">💡</span>
+    <div>
+      <strong>Core growth model: Authority-Led Growth.</strong> High-value content (case studies, insights, expertise) is the primary growth driver. WeSype provides the production scale. Acquisition layers (SEO, outbound) are amplifiers — not primary drivers. JAAB ensures the editorial standard, the strategic coherence, and the performance tracking.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ TAB 2: BUDGET -->
+<div id="tab-budget" class="tab-panel">
+  <div class="section-intro">
+    <h2>Budget <em>by Entity</em></h2>
+    <p>Allocation of the 100 k€ annual envelope across four entities. WeSype is outside this budget scope. WeBurst is included (12 k€/year, fixed line).</p>
+  </div>
+
+  <!-- Total strip -->
+  <div class="budget-total-strip">
+    <div>
+      <div class="big">100 k€</div>
+      <div class="label">Total Annual Budget</div>
+    </div>
+    <div class="note">Dynamic allocation: H1 2026 focused on building foundations (web, content, outbound), shifting in H2 toward authority and scale (events, SEO at cruising speed, paid media experiments).</div>
+  </div>
+
+  <!-- 4 entity cards -->
+  <div class="budget-entity-row">
+    <div class="entity-budget-card ec-group">
+      <div class="ent-amount">5 k€</div>
+      <div class="ent-name">AtScale Group</div>
+      <div class="ent-pct">5% of total</div>
+    </div>
+    <div class="entity-budget-card ec-op">
+      <div class="ent-amount" style="color:var(--orange)">66 k€</div>
+      <div class="ent-name">Operating Partners</div>
+      <div class="ent-pct">66% of total</div>
+    </div>
+    <div class="entity-budget-card ec-talent">
+      <div class="ent-amount" style="color:#1a6b6b">17 k€</div>
+      <div class="ent-name">Talent</div>
+      <div class="ent-pct">17% of total</div>
+    </div>
+    <div class="entity-budget-card ec-training">
+      <div class="ent-amount" style="color:#8b5e15">12 k€</div>
+      <div class="ent-name">Training</div>
+      <div class="ent-pct">12% of total</div>
+    </div>
+  </div>
+
+  <!-- Stacked bar -->
+  <div class="stacked-bar-wrap">
+    <div class="stacked-bar" id="stackedBar">
+      <div class="sb-seg sb-group"    style="width:5%">5%</div>
+      <div class="sb-seg sb-op"       style="width:66%">66%</div>
+      <div class="sb-seg sb-talent"   style="width:17%">17%</div>
+      <div class="sb-seg sb-training" style="width:12%">12%</div>
+    </div>
+    <div class="stacked-legend">
+      <div class="sl-item"><div class="sl-dot" style="background:var(--dark)"></div> AtScale Group — 5 k€</div>
+      <div class="sl-item"><div class="sl-dot" style="background:var(--orange)"></div> Operating Partners — 66 k€</div>
+      <div class="sl-item"><div class="sl-dot" style="background:#1a6b6b"></div> Talent — 17 k€</div>
+      <div class="sl-item"><div class="sl-dot" style="background:#8b5e15"></div> Training — 12 k€</div>
+    </div>
+  </div>
+
+  <!-- Detailed table -->
+  <div class="budget-table-wrap">
+    <table class="budget-table">
+      <thead>
+        <tr>
+          <th>Budget line</th>
+          <th>Group</th>
+          <th>Op. Partners</th>
+          <th>Talent</th>
+          <th>Training</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="poste-name">JAAB Retainer <span class="ext-badge">External CMO</span></div>
+            <div class="poste-sub">Strategy, governance, partner coordination, reporting, social monitoring (75% OP / 15% Talent / 10% Training)</div>
+          </td>
+          <td><span class="cell-muted">—</span></td>
+          <td>27 k€</td>
+          <td>5 k€</td>
+          <td>4 k€</td>
+          <td><strong>36 k€</strong></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="poste-name">Web Ecosystem</div>
+            <div class="poste-sub">Group homepage, OP refresh, Talent multipage site, Training foundation site</div>
+          </td>
+          <td>2 k€</td>
+          <td>4 k€</td>
+          <td>4 k€</td>
+          <td>2 k€</td>
+          <td><strong>12 k€</strong></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="poste-name">Content &amp; Authority Assets</div>
+            <div class="poste-sub">Video production, white papers, WeSype editorial oversight, LinkedIn content calendar</div>
+          </td>
+          <td><span class="cell-muted">—</span></td>
+          <td>13 k€</td>
+          <td>4 k€</td>
+          <td>2 k€</td>
+          <td><strong>19 k€</strong></td>
+        </tr>
+        <tr class="row-partner">
+          <td>
+            <div class="poste-name">SEO — WeBurst <span class="partner-badge">Fixed partner</span></div>
+            <div class="poste-sub">12 k€/year · Technical audit, continuous optimization, monthly review</div>
+          </td>
+          <td>2 k€</td>
+          <td>8 k€</td>
+          <td>1 k€</td>
+          <td>1 k€</td>
+          <td><strong>12 k€</strong></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="poste-name">Acquisition &amp; Outbound</div>
+            <div class="poste-sub">Landing pages, lead magnet flows, thematic pages, paid media experiments</div>
+          </td>
+          <td><span class="cell-muted">—</span></td>
+          <td>10 k€</td>
+          <td>2 k€</td>
+          <td>2 k€</td>
+          <td><strong>14 k€</strong></td>
+        </tr>
+        <tr>
+          <td>
+            <div class="poste-name">Events &amp; Industry Authority</div>
+            <div class="poste-sub">Sponsorships, travel, booth materials, on-site activation (H2 2026)</div>
+          </td>
+          <td>1 k€</td>
+          <td>4 k€</td>
+          <td>1 k€</td>
+          <td>1 k€</td>
+          <td><strong>7 k€</strong></td>
+        </tr>
+        <tr class="row-total">
+          <td><strong>TOTAL</strong></td>
+          <td><strong>5 k€</strong></td>
+          <td><strong>66 k€</strong></td>
+          <td><strong>17 k€</strong></td>
+          <td><strong>12 k€</strong></td>
+          <td><strong>100 k€</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note-box">
+    <span class="icon">⚠️</span>
+    <div>
+      <strong>WeSype (outside scope):</strong> The AI agent project on Dust is managed and billed separately. It is integrated as a technology partner in Pillar 2 and Pillar 3. JAAB ensures editorial coherence and strategic direction across agent-generated content.
+      <br><br>
+      <strong>JAAB Retainer distribution:</strong> The 36 k€ JAAB retainer is split 75% Operating Partners / 15% Talent / 10% Training, reflecting proportional focus across business units.
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ TAB 3: PACKAGE -->
+<div id="tab-package" class="tab-panel">
+  <div class="section-intro">
+    <h2>Core Package <em>&amp; Add-ons</em></h2>
+    <p>What is included in the JAAB engagement (core package), and what can be activated on top if scope or budget evolves.</p>
+  </div>
+
+  <div class="package-grid">
+    <!-- CORE -->
+    <div class="package-col">
+      <h3>✅ Core Package <span class="badge-col badge-inclus">Included</span></h3>
+      <div class="package-list">
+
+        <div class="package-item">
+          <div class="package-item-title">External CMO — Strategic Governance</div>
+          <div class="package-item-desc">Monthly Partner review, KPI reporting (leads, SEO, reach, social analytics), single point of contact across all partners. Full performance ownership.</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-group">Group</span>
+            <span class="wk-badge">Ongoing</span>
+          </div>
+        </div>
+
+        <div class="package-item">
+          <div class="package-item-title">Social Media Monitoring &amp; Analytics</div>
+          <div class="package-item-desc">Monthly LinkedIn performance tracking per partner, per theme, per format. Engagement rate, follower growth, lead attribution. Content calendar adjustments based on data.</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-op">Op. Partners</span>
+            <span class="entity-tag tag-talent">Talent</span>
+            <span class="wk-badge">Ongoing</span>
+          </div>
+        </div>
+
+        <div class="package-item">
+          <div class="package-item-title">Web Ecosystem Buildout</div>
+          <div class="package-item-desc">Group homepage, OP site refresh, Talent multipage site (Candidate/Client tracks), Training foundation site. Unified naming convention and brand alignment.</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-group">Group</span>
+            <span class="entity-tag tag-op">OP</span>
+            <span class="entity-tag tag-talent">Talent</span>
+            <span class="entity-tag tag-training">Training</span>
+            <span class="wk-badge">Q2 2026</span>
+          </div>
+        </div>
+
+        <div class="package-item">
+          <div class="package-item-title">LinkedIn Posting Routines for Partners <span class="wesype-badge">WeSype Agent</span></div>
+          <div class="package-item-desc">Structured publishing framework: 1 associate · 1 theme · 1 persona · 1 topic per cycle. The WeSype agent handles production at scale; JAAB validates tone, quality and strategic alignment.</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-op">Op. Partners</span>
+            <span class="entity-tag tag-talent">Talent</span>
+            <span class="entity-tag tag-training">Training</span>
+            <span class="wk-badge">Q3 2026 onward</span>
+          </div>
+        </div>
+
+        <div class="package-item">
+          <div class="package-item-title">White Papers &amp; Thought Leadership <span class="wesype-badge">WeSype Agent</span></div>
+          <div class="package-item-desc">2 flagship white papers (e.g. "Sales Excellence for Pre-Exit", "The Sales Recruitment Framework"). Agent-driven drafting with JAAB editorial oversight. Multi-format repurposing: posts, excerpts, outbound snippets.</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-op">Op. Partners</span>
+            <span class="entity-tag tag-talent">Talent</span>
+            <span class="wk-badge">Q2 2026</span>
+          </div>
+        </div>
+
+        <div class="package-item">
+          <div class="package-item-title">Video Production — Proof Points &amp; Promotions</div>
+          <div class="package-item-desc">Client testimonials and BU showcase videos produced initially as text assets via WeSype, adapted into video formats progressively. Includes promotional videos for website and sales decks.</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-op">Op. Partners</span>
+            <span class="entity-tag tag-talent">Talent</span>
+            <span class="entity-tag tag-training">Training</span>
+            <span class="wk-badge">Q3 2026</span>
+          </div>
+        </div>
+
+        <div class="package-item">
+          <div class="package-item-title">Systematic Lead Magnet Approach</div>
+          <div class="package-item-desc">Every WeSype-produced content asset (white paper, post series, case study) is systematically packaged as a lead magnet with dedicated capture flow, landing page and nurture sequence.</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-op">Op. Partners</span>
+            <span class="entity-tag tag-talent">Talent</span>
+            <span class="wk-badge">Q3 2026</span>
+          </div>
+        </div>
+
+        <div class="package-item">
+          <div class="package-item-title">SEO Coordination — WeBurst</div>
+          <div class="package-item-desc">Oversight of the SEO contract (12 k€/year), monthly performance review, integration of recommendations into the broader content strategy. WeBurst reports through JAAB.</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-op">Op. Partners</span>
+            <span class="entity-tag tag-talent">Talent</span>
+            <span class="wk-badge">Ongoing</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ADD-ONS -->
+    <div class="package-col">
+      <h3>🚀 Add-ons <span class="badge-col badge-bonus">On additional time</span></h3>
+      <div class="package-list">
+
+        <div class="package-item bonus-item">
+          <div class="package-item-title">Full Event Activation</div>
+          <div class="package-item-desc">Booth, print materials, on-site digital activation (QR codes, event landing pages), full post-event content repurposing across channels.</div>
+          <div class="pkg-tags"><span class="entity-tag tag-op">Op. Partners</span></div>
+        </div>
+
+        <div class="package-item bonus-item">
+          <div class="package-item-title">LinkedIn Ads &amp; Google Ads</div>
+          <div class="package-item-desc">Paid campaigns to amplify best-performing organic content. Setup, optimization and monthly performance reporting.</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-op">Op. Partners</span>
+            <span class="entity-tag tag-talent">Talent</span>
+          </div>
+        </div>
+
+        <div class="package-item bonus-item">
+          <div class="package-item-title">PR &amp; Media Relations Program</div>
+          <div class="package-item-desc">Identification of key B2B/PE journalists and media. Press releases, media kits, interview pitching for Partners.</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-op">Op. Partners</span>
+            <span class="entity-tag tag-talent">Talent</span>
+          </div>
+        </div>
+
+        <div class="package-item bonus-item">
+          <div class="package-item-title">Competitive Intelligence &amp; Market Watch</div>
+          <div class="package-item-desc">Quarterly report: competitor benchmarking, positioning opportunities, ecosystem shifts in PE/SaaS B2B.</div>
+          <div class="pkg-tags"><span class="entity-tag tag-group">Group</span></div>
+        </div>
+
+        <div class="package-item bonus-item">
+          <div class="package-item-title">Advanced Video Content Program</div>
+          <div class="package-item-desc">Production of long-form documentary-style case studies, thought leadership interviews and event highlights for high-stakes distribution (PE/VC targets, LinkedIn campaigns).</div>
+          <div class="pkg-tags">
+            <span class="entity-tag tag-op">Op. Partners</span>
+            <span class="entity-tag tag-talent">Talent</span>
+          </div>
+        </div>
+
+        <div class="package-item bonus-item">
+          <div class="package-item-title">Speaker Coaching &amp; Executive Presence</div>
+          <div class="package-item-desc">Structured preparation for Partners ahead of keynote slots: messaging, storytelling, Q&amp;A training. Includes pitch deck refinement for event formats.</div>
+          <div class="pkg-tags"><span class="entity-tag tag-op">Op. Partners</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ TAB 4: GANTT -->
+<div id="tab-gantt" class="tab-panel">
+  <div class="section-intro">
+    <h2>Gantt <em>Roadmap</em> — June 2026 to June 2027</h2>
+    <p>Deployment calendar by pillar and entity. H1: foundations and credibility. H2: acquisition, authority and content at scale via WeSype.</p>
+  </div>
+
+  <div class="gantt-legend">
+    <div class="gantt-legend-item"><div class="gantt-dot gd-group"></div> Group / JAAB</div>
+    <div class="gantt-legend-item"><div class="gantt-dot gd-op"></div> Operating Partners</div>
+    <div class="gantt-legend-item"><div class="gantt-dot gd-talent"></div> Talent</div>
+    <div class="gantt-legend-item"><div class="gantt-dot gd-training"></div> Training</div>
+    <div class="gantt-legend-item"><div class="gantt-dot gd-partner"></div> Partners (WeBurst / WeSype)</div>
+    <div class="gantt-legend-item" style="gap:8px">
+      <div style="width:22px;height:10px;border-radius:3px;border:2px dashed #aaa;"></div> Preparation phase
+    </div>
+  </div>
+
+  <div class="gantt-wrap">
+    <div class="gantt-inner">
+
+      <div class="gantt-header">
+        <div class="gantt-header-cell">Initiative</div>
+        <div class="gantt-header-cell">Jun</div>
+        <div class="gantt-header-cell">Jul</div>
+        <div class="gantt-header-cell">Aug</div>
+        <div class="gantt-header-cell">Sep</div>
+        <div class="gantt-header-cell">Oct</div>
+        <div class="gantt-header-cell">Nov</div>
+        <div class="gantt-header-cell">Dec</div>
+        <div class="gantt-header-cell">Jan</div>
+        <div class="gantt-header-cell">Feb</div>
+        <div class="gantt-header-cell">Mar</div>
+        <div class="gantt-header-cell">Apr</div>
+        <div class="gantt-header-cell">May</div>
+        <div class="gantt-header-cell">Jun</div>
+      </div>
+
+      <!-- PILLAR 1: WEB -->
+      <div class="gantt-row section-header">
+        <div class="gantt-label">🌐 PILLAR 1 — WEB ECOSYSTEM</div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">UX brief &amp; architecture <small>Group + all BUs</small></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">Dev &amp; integration — OP site <small>at-scale.co refresh</small></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">Talent site (multipage) <small>talent.atscale.co</small></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-talent"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-talent"></div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">Training site (foundation) <small>training.atscale.co</small></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-training"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-training"></div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      </div>
+
+      <!-- PILLAR 2: CONTENT -->
+      <div class="gantt-row section-header">
+        <div class="gantt-label">✍️ PILLAR 2 — CONTENT &amp; AUTHORITY (WeSype-powered)</div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">White papers <small>prep Jun–Jul · Sep · Nov · Jan · Mar · May</small></div>
+        <!-- Jun: prep -->
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar phase-prep gb-op-dash"></div></div>
+        <!-- Jul: prep -->
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar phase-prep gb-op-dash"></div></div>
+        <!-- Aug: empty -->
+        <div class="gantt-cell"></div>
+        <!-- Sep: publish #1 -->
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:#6b8b9e">WP</div></div>
+        <!-- Oct: empty -->
+        <div class="gantt-cell"></div>
+        <!-- Nov: publish #2 -->
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:#6b8b9e">WP</div></div>
+        <!-- Dec: empty -->
+        <div class="gantt-cell"></div>
+        <!-- Jan: publish #3 -->
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:#6b8b9e">WP</div></div>
+        <!-- Feb: empty -->
+        <div class="gantt-cell"></div>
+        <!-- Mar: publish #4 -->
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:#6b8b9e">WP</div></div>
+        <!-- Apr: empty -->
+        <div class="gantt-cell"></div>
+        <!-- May: publish #5 -->
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:#6b8b9e">WP</div></div>
+        <!-- Jun: empty -->
+        <div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">LinkedIn posting routines <small>1 associate · 1 theme · 1 persona</small></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar phase-prep gb-op-dash"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar phase-prep gb-op-dash"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">Video production <small>Oct · Mar · Jun milestones</small></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <!-- Oct -->
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:var(--orange)">▶</div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <!-- Mar -->
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:var(--orange)">▶</div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <!-- Jun -->
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:var(--orange)">▶</div></div>
+      </div>
+
+      <!-- PILLAR 3: ACQUISITION -->
+      <div class="gantt-row section-header">
+        <div class="gantt-label">📈 PILLAR 3 — ACQUISITION &amp; LEAD GENERATION</div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">SEO — WeBurst <small>OP + Talent (ongoing)</small></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-partner"></div></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">Lead magnet flows (all WeSype content) <small>OP + Talent + Training</small></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar phase-prep gb-op-dash"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+      </div>
+
+
+      <!-- PILLAR 4: EVENTS -->
+      <div class="gantt-row section-header">
+        <div class="gantt-label">🎤 PILLAR 4 — EVENTS &amp; INDUSTRY AUTHORITY</div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">Speaker program <small>pitching Partners for keynotes</small></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar phase-prep gb-op-dash"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar phase-prep gb-op-dash"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op"></div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">Event #1 (e.g. IPEM Paris) <small>OP</small></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op" style="height:22px;border-radius:6px;"></div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">Event #2 (e.g. SaaStock / London) <small>OP</small></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-op" style="height:22px;border-radius:6px;"></div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+      </div>
+
+      <!-- PILLAR 5: GOVERNANCE -->
+      <div class="gantt-row section-header">
+        <div class="gantt-label">⚙️ PILLAR 5 — EXTERNAL CMO GOVERNANCE</div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">JAAB retainer — monthly steering <small>Group (transversal)</small></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+        <div class="gantt-cell" style="position:relative"><div class="gantt-bar gb-group"></div></div>
+      </div>
+
+      <div class="gantt-row">
+        <div class="gantt-label">Quarterly milestone reviews <small>Group</small></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:var(--dark)">Q</div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:var(--dark)">Q</div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:var(--dark)">Q</div></div>
+        <div class="gantt-cell"></div><div class="gantt-cell"></div>
+        <div class="gantt-cell" style="position:relative"><div class="milestone" style="background:var(--orange)">★</div></div>
+        <div class="gantt-cell"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="margin-top:20px;" class="note-box">
+    <span class="icon">📌</span>
+    <div>
+      <strong>H1 (June → Nov 2026):</strong> Foundations — web buildout, white papers, LinkedIn posting routines setup, SEO, outbound sequences launch.
+      <br><strong>H2 (Dec 2026 → June 2027):</strong> Scale and authority — content at cruising speed via WeSype, events, ad hoc video adaptations, annual performance review (⭐ June 2027).
+    </div>
+  </div>
+</div>
+
+</main>
+
+<footer style="text-align:center;padding:20px 40px;font-size:11px;color:var(--muted);border-top:1px solid var(--border);">
+  Prepared by <strong style="color:var(--orange)">JAAB Conseil</strong> for AtScale Group — Confidential — May 2026
+</footer>
+
+<script>
+function showTab(name, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('nav.tabs button').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
+</body>
+</html>
